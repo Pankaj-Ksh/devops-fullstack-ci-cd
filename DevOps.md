@@ -165,6 +165,7 @@ Only the required ports are exposed:
 - CI/CD deployment target is controlled using a pipeline variable
   (`DEPLOY_TARGET=local | aws`). files are used strategically to maintain a clean and secure repository
 - Public container images do **not** contain any credentials or sensitive data
+- 💰AWS cloud infrastructure was terminated after deployment validation to avoid unnecessary ongoing costs.
 
 ---
 
