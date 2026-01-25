@@ -39,9 +39,12 @@ jobs:
       - name: Deploy using Docker Compose
         shell: bash
         run: |
-          docker compose -f docker-compose.prod.yml down
+          docker rm -f django-backend || true
+          docker rm -f react-frontend || true
+          docker compose -f docker-compose.prod.yml down --remove-orphans
           docker compose -f docker-compose.prod.yml pull
           docker compose -f docker-compose.prod.yml up -d
+
 
   deploy-aws:
     name: Deploy (AWS EC2)
@@ -58,6 +61,8 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd app
-            docker compose -f docker-compose.prod.yml down
+            docker rm -f django-backend || true
+            docker rm -f react-frontend || true
+            docker compose -f docker-compose.prod.yml down --remove-orphans
             docker compose -f docker-compose.prod.yml pull
             docker compose -f docker-compose.prod.yml up -d
