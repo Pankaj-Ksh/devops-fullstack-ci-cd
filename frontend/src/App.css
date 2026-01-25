@@ -21,7 +21,7 @@ h1 {
   margin: 0;
   font-weight: 800;
   letter-spacing: -0.025em;
-  background: linear-gradient(to right, #f02d0b, #ed7c3a);
+  background: linear-gradient(to right, #1af00b, #3aedde);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
