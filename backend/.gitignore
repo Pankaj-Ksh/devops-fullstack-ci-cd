@@ -1,0 +1,30 @@
+# Logs
+logs
+*.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv
+env
+
+# Environment files
+.env
+.env.*
+*.local
+
+# Django
+*.sqlite3
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

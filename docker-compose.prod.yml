@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  backend:
+    image: pankaj5832/django-backend:latest
+    container_name: django-backend
+    ports:
+      - "8000:8000"
+    restart: always
+
+  frontend:
+    image: pankaj5832/react-frontend:latest
+    container_name: react-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
