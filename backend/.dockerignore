@@ -13,8 +13,3 @@ __pycache__/
 # Editor / OS
 .vscode/
 .idea/
-.DS_Store
-
-# Docker
-Dockerfile
-docker-compose.yml
